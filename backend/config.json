@@ -1,0 +1,12 @@
+{
+   "port": 9000,
+   "sslPort":9001,
+   "db": "c4me",
+   "host": "localhost",
+   "pass": "qnzMxS7qAB^@qm",
+   "user": "root",
+   "keys":["h026U8fpFjMyFr0qTpe6fvbk5Wg8ldutgVsIIbsZ3zTzuXNOP0B8NfnoKfoFeY3x"],
+   "frontEndAddress": "127.0.0.1:3000",
+   "collegeranksite": "http://allv22.all.cs.stonybrook.edu/~stoller/cse416/WSJ_THE/index.html",
+   "collegedatasite": "http://allv22.all.cs.stonybrook.edu/~stoller/cse416/collegedata/"
+}

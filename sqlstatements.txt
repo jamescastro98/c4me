@@ -1,0 +1,115 @@
+CREATE DATABASE c4me;
+
+USE c4me;
+
+SELECT DATABASE();
+
+***THE ABOVE COMMAND SHOULD VERIFY YOU ARE USING c4me***
+
+To fix the common authentication issue:
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '{NewPassword}';
+
+CREATE TABLE User (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	user_name VARCHAR(50) NOT NULL UNIQUE,
+	password CHAR(64) NOT NULL,
+	type ENUM ('Student', 'Admin') NOT NULL,
+	first_name VARCHAR(50),
+	last_name VARCHAR(50),
+	email VARCHAR(255)
+);
+
+CREATE TABLE Admin (
+	id INT,
+	PRIMARY KEY(id),
+	FOREIGN KEY(id) REFERENCES User(id)
+);
+
+CREATE TABLE HighSchool (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(255) NOT NULL,
+	city VARCHAR(255) NOT NULL,
+	state CHAR(2),
+	ap_enroll DOUBLE,
+	sat_score INT,
+	act_score INT,	
+	interested_majors VARCHAR(255),
+	interested_schools VARCHAR(500)
+);
+
+CREATE TABLE Student (
+	id INT,
+	PRIMARY KEY(id),
+	FOREIGN KEY(id) REFERENCES User(id) ON DELETE CASCADE,
+	hs_id INT,
+	FOREIGN KEY(hs_id) REFERENCES HighSchool(id),
+	financial_status INT,
+	major1 VARCHAR(255),
+	major2 VARCHAR(255),
+	grad_year INT,
+	sat_math INT,
+	sat_ebrw INT,
+	act_eng INT,
+	act_math INT,
+	act_reading INT,
+	act_science INT,
+	act_comp INT,
+	sat_lit INT,
+	sat_us INT, 
+	sat_mathI INT,
+	sat_mathII INT,
+	sat_eco INT,
+	sat_mol INT,
+	sat_chem INT,
+	sat_phy INT,
+	numAPs INT,
+	gpa FLOAT
+);
+
+   CREATE TABLE School (
+  	id INT AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(255) UNIQUE NOT NULL,
+	city VARCHAR(255),
+	state CHAR(2),
+	region ENUM ('Northeast', 'Midwest', 'South', 'West'),
+	admission_rate DOUBLE,
+cost DOUBLE,
+	ranking INT,
+size INT,
+act_composite INT,
+sat_math INT,
+sat_ebrw INT,
+act_range_low INT,
+act_range_high INT,
+sat_math_range_low INT,
+sat_math_range_high INT,
+sat_ebrw_range_low INT,
+sat_ebrw_range_high INT,
+avg_accepted_gpa FLOAT,
+accepted_gpa_high FLOAT,
+accepted_gpa_low FLOAT
+    );
+
+CREATE TABLE Majors (
+	school_id INT,
+	major VARCHAR(255),
+	PRIMARY KEY(school_id, major),
+	FOREIGN KEY(school_id) REFERENCES School(id)
+);
+
+CREATE TABLE Applications (
+	student_id INT,
+	college_id INT,
+	FOREIGN KEY(student_id) REFERENCES Student(id) ON DELETE CASCADE,
+	FOREIGN KEY(college_id) REFERENCES School(id) ON DELETE CASCADE,
+	PRIMARY KEY(student_id, college_id),
+	questionable BOOL,
+	status ENUM('Pending', 'Waitlisted', 'Accepted', 'Rejected', 'Deferred', 'Withdrawn')
+);
+CREATE TABLE LoggedIn (
+	id INT,PRIMARY KEY(id),
+FOREIGN KEY(id) 
+ 	REFERENCES User(id) ON DELETE CASCADE,
+random_val INT
+);
