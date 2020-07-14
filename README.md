@@ -6,7 +6,7 @@ chances at getting into said schools, and connect with fellow colleagues along t
 
 ### Dependencies
 
-Project Setup is simple and easy! First, make sure you have [https://dev.mysql.com/downloads/] (MySQL) and[https://nodejs.org/en/download/] (nodeJS) installed.
+Project Setup is simple and easy! First, make sure you have [MySQL] (https://dev.mysql.com/downloads/) and[nodeJs] (https://nodejs.org/en/download/) installed.
 Setting up the frontend and backend from there is easy. Simply change into their respective directory, and type npm install.
 
 For the frontend, run the script necessary to start it via npm start. 
@@ -14,7 +14,7 @@ For the frontend, run the script necessary to start it via npm start.
 For the backend, simply run via node app.js
 
 Setting up the database after installing MySQL is slightly more involved due to the security features of MySQL. However, once a 
-MySQL username is set up, you can create the database through the console or MySQL workbench with the lines [https://github.com/jamescastro98/c4me/blob/master/sqlstatements.txt] (here.) Please note that your credentials must be written into the config.json file [https://github.com/jamescastro98/c4me/blob/master/backend/config.json] (here).
+MySQL username is set up, you can create the database through the console or MySQL workbench with the lines [here] (https://github.com/jamescastro98/c4me/blob/master/sqlstatements.txt) Please note that your credentials must be written into the config.json file [here] (https://github.com/jamescastro98/c4me/blob/master/backend/config.json).
 
 ### Screenshots
 ![alt text](img/login.png "Login Page")
@@ -30,10 +30,10 @@ MySQL username is set up, you can create the database through the console or MyS
 
 Everything great has a team behind it. Here's ours:
 
-[https://github.com/deannaliu](Deanna Liu) - Frontend & Documentation
+[Deanna Liu](https://github.com/deannaliu) - Frontend & Documentation
 
-[https://github.com/jamescastro98](James Castro) - Frontend, Frontend/Backend Connection & Testing, Final Readme
+[James Castro](https://github.com/jamescastro98) - Frontend, Frontend/Backend Connection & Testing, Final Readme
 
-[https://github.com/JoeSpivack](Joseph Spivack) - Backend, Database Setup & Frontend/Backend Connection
+[Joseph Spivack](https://github.com/JoeSpivack) - Backend, Database Setup & Frontend/Backend Connection
 
-[https://github.com/SevenNateNine](Nathan Chan) - Database Setup, Backend & Testing
+[Nathan Chan](https://github.com/SevenNateNine) - Database Setup, Backend & Testing
