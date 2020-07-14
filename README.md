@@ -1,16 +1,39 @@
-### c4me
-NOTE:
+# c4me
+![alt text](img/landing.png "Landing")
+### About
+c4me is a Full Stack Webapp that allows users to lookup college information, sort through them, gain insights to their 
+chances at getting into said schools, and connect with fellow colleagues along the way! 
 
-James (Me - kinda a dummy), has been committing from my windows partition instead of my Ubuntu.
-However, GRUB has been messing with my timeslot, so I've been committing in GMT.
+### Dependencies
+
+Project Setup is simple and easy! First, make sure you have [https://dev.mysql.com/downloads/] (MySQL) and[https://nodejs.org/en/download/] (nodeJS) installed.
+Setting up the frontend and backend from there is easy. Simply change into their respective directory, and type npm install.
+
+For the frontend, run the script necessary to start it via npm start. 
+
+For the backend, simply run via node app.js
+
+Setting up the database after installing MySQL is slightly more involved due to the security features of MySQL. However, once a 
+MySQL username is set up, you can create the database through the console or MySQL workbench with the lines [https://github.com/jamescastro98/c4me/blob/master/sqlstatements.txt] (here.) Please note that your credentials must be written into the config.json file [https://github.com/jamescastro98/c4me/blob/master/backend/config.json] (here).
+
+### Screenshots
+![alt text](img/login.png "Login Page")
+
+![alt text](img/admin.png "Admin Dashboard")
+
+![alt text](img/search.png "College Search")
+
+![alt text](img/applications.png "Previous Applications")
 
 
-**How to Install**
+### Credits
 
-Installing is simple and easy! First, make sure you have [https://dev.mysql.com/downloads/] (MySQL) and[https://nodejs.org/en/download/] (nodeJS) installed.
+Everything great has a team behind it. Here's ours:
 
-If you have node installed properly, you also have npm! Npm used to mean node package manager, now it is quite literally meaningless.
+[https://github.com/deannaliu](Deanna Liu) - Frontend & Documentation
 
-The project has a variety of dependencies that npm can install quite easily. Simply cd into the respective directories (c4me and backend)  and type "npm install".
+[https://github.com/jamescastro98](James Castro) - Frontend, Frontend/Backend Connection & Testing, Final Readme
 
-NPM will look for the dependencies in the packages.json and install them. From there, everything should be installed! Type npm start to begin the servers.
+[https://github.com/JoeSpivack](Joseph Spivack) - Backend, Database Setup & Frontend/Backend Connection
+
+[https://github.com/SevenNateNine](Nathan Chan) - Database Setup, Backend & Testing
